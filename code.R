@@ -1,10 +1,8 @@
-###################
-##	Final Project #
-###################
-setwd("/Users/lydia/Dropbox/Course/STAT 2320/final exam")
-
-Question 1
-#################seasonal ARIMA
+#---------------------------
+# Question 1
+# Monthly Alcohol Wholesale
+#---------------------------
+#seasonal ARIMA
 data1=read.csv("alc.csv")
 alc=ts(data1,start=2002,f=12)
 plot(y=alc,x=as.vector(time(alc)),ylab='Alcohol wholesale (x$1,000,000)',xlab='Time',type='o',pch=as.vector(season(alc)),main='Montly Alcohol Wholesale in the U.S. \n From 2002 to 2008')
@@ -53,9 +51,10 @@ points(upper,lty=3,col="slateblue4",type="o",lwd=2)
 
 
 
-###############
-Question 2	###
-###############
+#---------------------------
+# Question 2
+# Monthly Count of Homicides
+#---------------------------
 
 #read in data and plot
 data2=read.csv("homicide.csv")
@@ -108,9 +107,11 @@ points(upper,lty=3,col="slateblue4",type="o",lwd=2)
 
 
 
-###############
-Question 3	###
-###############seasonal ARIMA, P=1,Q=0. maybe p=0,q=1
+#---------------------------
+# Question 3
+# Monthly Lake Erie Levels
+#---------------------------
+# seasonal ARIMA, P=1,Q=0. maybe p=0,q=1
 
 data3=scan("erie.dat")
 erie=ts(data3,start=1921,f=12)
@@ -177,9 +178,10 @@ points(upper,lty=3,col="slateblue4",type="o",lwd=2)
 
 
 
-###############
-Question 4	###
-###############
+#---------------------------
+# Question 4
+# Gas Furnace
+#---------------------------
 
 data4=scan("methane.dat")
 data5=scan("co2.dat")
